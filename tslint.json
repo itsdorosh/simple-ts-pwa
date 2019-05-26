@@ -1,0 +1,34 @@
+{
+    "extends": "tslint:latest",
+    "rules": {
+        "indent": [true, "spaces", 4],
+		"whitespace": [false],
+		"semicolon": [true, "always"],
+		"quotemark": [true, "double"],
+		"no-var-keyword" : true,
+		"no-unused-variable" :[ true, "check-parameters", {"ignore-pattern": "^_\\$"}],
+		"no-trailing-whitespace":true,
+		"only-arrow-functions": false,
+		"no-unused-expression": [true, "allow-new"],
+		"trailing-comma": [ true, "never"],
+		"object-literal-shorthand": false,
+		"object-literal-sort-keys": false,
+		"variable-name": [true, "check-format"],
+		"curly":true,
+		"no-console":false,
+		"no-angle-bracket-type-assertion":false,
+		"no-submodule-imports":false,
+		"max-line-length":false,
+		"no-bitwise": false,
+		"typedef":[true,
+			"call-signature",
+			"arrow-call-signature",
+			"parameter",
+			"arrow-parameter",
+			"property-declaration",
+			"variable-declaration",
+			"member-variable-declaration"
+		],
+		"jsdoc-format":true
+    }
+}
