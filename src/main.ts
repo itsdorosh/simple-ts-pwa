@@ -8,23 +8,23 @@ if ("serviceWorker" in navigator) {
     console.log("serviceWorker is not supported");
 }
 
-let defferedPrompt: any;
-window.addEventListener("beforeinstallprompt", (e: any) => {
-    e.preventDefault();
-    defferedPrompt = e;
+let deferredPrompt: any;
+window.addEventListener("beforeinstallprompt", (beforeInstallPromptEvent: any) => {
+    beforeInstallPromptEvent.preventDefault();
+    deferredPrompt = beforeInstallPromptEvent;
 });
 
 const button: HTMLButtonElement = document.createElement("button");
 button.innerHTML = "Add Icon";
 document.body.appendChild(button);
 
-button.addEventListener("click", (e: MouseEvent) => {
-    defferedPrompt.prompt();
-    defferedPrompt.userChoice.then((choiceResult: any) => {
+button.addEventListener("click", () => {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then((choiceResult: any) => {
         if (choiceResult.outcome === "accepted") {
             console.log("user accepted");
         }
 
-        defferedPrompt = null;
+        deferredPrompt = null;
     });
 });

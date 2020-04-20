@@ -20,7 +20,7 @@ workbox.routing.registerRoute(
     new workbox.strategies.NetworkFirst()
 );
 
-self.addEventListener('install', event => {
+self.addEventListener('install', (event) => {
     console.log('service worker install event!');
     event.waitUntil(
         caches.open(cacheName)
@@ -28,11 +28,11 @@ self.addEventListener('install', event => {
     );
 });
 
-self.addEventListener('activate', event => {
+self.addEventListener('activate', () => {
     console.log('service worker activate event!');
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
     event.respondWith(caches.match(event.request)
         .then(cachedResponse => cachedResponse || fetch(event.request))
     );

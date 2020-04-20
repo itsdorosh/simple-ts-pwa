@@ -1,2 +1,9 @@
+# editor & IDE settings
+.idea
+.vscode
+
+# dependencies
 node_modules
+
+# built
 dist
