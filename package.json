@@ -12,12 +12,12 @@
   "author": "itsdorosh (Andry Doroshenko)",
   "license": "ISC",
   "devDependencies": {
-    "ts-loader": "^6.0.1",
-    "tslint": "^5.16.0",
+    "ts-loader": "^6.2.2",
+    "tslint": "^5.20.1",
     "typescript": "^3.8.3",
-    "webpack": "^4.32.2",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.4.1",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
     "workbox-webpack-plugin": "^4.3.1"
   }
 }
